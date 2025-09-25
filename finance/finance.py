@@ -1,6 +1,6 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
 from .ui.mimamba import mimamba
-from .ui.mimamba2 import mimamba2
+from .ui.mimamba2 import nav_bar_button
 import reflex as rx
 from rxconfig import config
 
@@ -62,15 +62,31 @@ def index() -> rx.Component:
                     justify="between",
                     align="center",
                 ),
+            #* левая и правая часть
                 rx.box(
-                        rx.hstack(
-                            rx.box(rx.vstack(
-                                mimamba2(),
-                                    ),),
-                                        rx.box(),
-                                ),
-                    
-                    ),
+                    rx.hstack(
+                        #* левая сторона с кнопками
+                        #? nav_bar.py
+                        rx.box(
+                            rx.vstack(
+                                nav_bar_button("house"),
+                                nav_bar_button("database"),
+                                nav_bar_button("calendar-range"),
+                                nav_bar_button("folder"),
+                                nav_bar_button("square-chart-gantt"),
+                                nav_bar_button("chart-column-big"),
+                                nav_bar_button("users"),
+                                nav_bar_button("upload"),
+                            ),
+                            width="150px",
+                            
+                        ),    
+                        #* правая сторона
+                        rx.box(
+                            width="100%",
+                        ),    
+                    ),  
+                ),
                 
                 width="100%"
             ),
