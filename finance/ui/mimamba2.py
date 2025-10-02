@@ -1,14 +1,20 @@
 import reflex as rx
 
-def mimamba2(icon = 'ampersands'):
+def nav_bar_button(icon="circle-dot"):
     return rx.button(
-            tag = icon ,
-            padding = '20px',   
-            max_height = '48px',
-            max_width = '48px',
-            color="white", 
-            _hover= {
-            'background':'white',
-            'color':'black',
-            
-            }),
+        rx.icon(
+            tag=icon,
+            color="#d5d6d1",
+            _hover={
+                "color":"black",
+            }
+        ),
+        border_radius="50%",
+        min_width="48px",
+        min_height="48px",
+        padding="0",
+        background="#4c4c4c",
+        _hover={
+            "background":"white",
+        }
+    )  
