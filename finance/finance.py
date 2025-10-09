@@ -236,7 +236,80 @@ def index() -> rx.Component:
                                 ),
                             
                             #2 block
-                            rx.box(),
+                            rx.box(
+                                    rx.hstack(
+                                        
+                                        rx.box(
+                                        rx.vstack(
+                                        rx.flex(
+                                            rx.text("All Outlets",font_size="25px"),
+                                            rx.button(
+                                                rx.icon(
+                                                    tag="move-up-right",
+                                                    color="white",
+                                                ),
+                                                border_radius="50%",
+                                                min_width="48px",
+                                                min_height="48px",
+                                                padding="0",
+                                                background="#3a3a3a",
+                                            ),
+                                            width="100%",
+                                            display="flex",
+                                            justify="between",
+                                            align="center",
+                                        ),
+                                        rx.slider(),
+                                        rx.hstack(
+                                            rx.text(
+                                                "$ ",
+                                                rx.text.strong("400,500.00"),
+                                                font_size="25px",
+                                            ),
+                                            rx.text("This is 150,000.00 less",color="#3a3a3a"),    
+                                        ),
+                                    ),
+                                        background="#232323",
+                                        width="40%",
+                                        border_radius="35px",
+                                        padding="20px",
+                                        align = 'center',
+                                    ),
+                                    
+                                    rx.box(
+                                        rx.flex(
+                                            rx.text("Transfer",font_size="19px"),
+                                            rx.button(
+                                                rx.icon(
+                                                    tag="move-up-right",
+                                                    color="white",
+                                                ),
+                                                border_radius="50%",
+                                                min_width="48px",
+                                                min_height="48px",
+                                                padding="0",
+                                                background="#3a3a3a",
+                                            ),
+                                            width="100%",
+                                            display="flex",
+                                            justify="between",
+                                            align="center",
+                                        ),
+                                        rx.vstack(
+                                            rx.text(rx.text.strong("1", color="#d8ff00")," transfer", font_size="25px"),   
+                                            rx.text("Waiting to be received",color="#3a3a3a"),   
+                                        ),
+                                        background="#252525",
+                                        width="28%",
+                                        height="160px",
+                                        border_radius="35px",
+                                        padding="20px",
+                                    ),
+                                        
+                                    ),
+                                margin_top="15px",
+                                width="100%",
+                            ),
                             
                             #3 block
                             rx.box(),
